@@ -1,0 +1,15 @@
+footer {
+  background-color: white;
+  color: white;
+  position: relative;
+
+  p {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+}
+
+img {
+  width: -webkit-fill-available;
+}
