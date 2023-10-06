@@ -1,7 +1,7 @@
 import { createClient } from "next-sanity";
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
-import { Contact } from "./components/Contact/Contact";
+import { Header } from "../components/Header/Header";
+import { Footer } from "../components/Footer/Footer";
+import { Contact } from "../components/Contact/Contact";
 
 export default function IndexPage({ books }) {
   return (
@@ -20,7 +20,7 @@ export default function IndexPage({ books }) {
                   <p className="book__author" key={book._id}>
                     {book?.author}
                   </p>
-                  <img alt="book cover" src={book.image} />
+                  <img alt="book cover" src={book.image} key={book._id} />
                 </div>
               ))}
             </div>
