@@ -3,12 +3,14 @@ import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { Contact } from "../components/Contact/Contact";
 
+
+
 export default function IndexPage({ books }) {
   return (
     <>
       <main>
         <Header />
-        {books.length > 0 && (
+        {/* {books.length > 0 && (
           <section>
             <h2>Books</h2>
             <div className="books__wrapper">
@@ -26,7 +28,7 @@ export default function IndexPage({ books }) {
             </div>
           </section>
         )}
-        {!books.length > 0 && <p>No books to show</p>}
+        {!books.length > 0 && <p>No books to show</p>} */}
         <Contact />
         <Footer />
       </main>
