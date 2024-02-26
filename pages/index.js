@@ -2,8 +2,8 @@ import { createClient } from "next-sanity";
 import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { Contact } from "../components/Contact/Contact";
-
-
+import { Card } from "../components/Card/Card";
+// import {books} from "../config/books";
 
 export default function IndexPage({ books }) {
   return (
@@ -29,6 +29,7 @@ export default function IndexPage({ books }) {
           </section>
         )}
         {!books.length > 0 && <p>No books to show</p>} */}
+        <Card />
         <Contact />
         <Footer />
       </main>
