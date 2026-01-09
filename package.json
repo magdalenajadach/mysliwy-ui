@@ -8,8 +8,9 @@
     "post-update": "yarn upgrade --latest"
   },
   "dependencies": {
+    "@sanity/client": "^7.13.2",
+    "@sanity/image-url": "^2.0.2",
     "next": "^13",
-    "next-sanity": "^5.5.3",
     "react": "^18",
     "react-dom": "^18"
   },
