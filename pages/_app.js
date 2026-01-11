@@ -2,6 +2,7 @@
 import "../styles.scss";
 import "../components/Header/Header.scss";
 import "../components/Footer/Footer.scss";
+import "../components/Card/Card.scss";
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
