@@ -40,6 +40,12 @@ export function Card({ books }) {
               {book.author && (
                 <p className="book-card__author">{book.author}</p>
               )}
+              {book.publisher && (
+                <p className="book-card__publisher">wydawnictwo: {book.publisher}</p>
+              )}
+              {book.yearOfIssue && (
+                <p className="book-card__year">rok: {book.yearOfIssue}</p>
+              )}
             </div>
           </div>
         ))}
@@ -64,6 +70,12 @@ export function Card({ books }) {
               <h2 className="modal__title">{selectedBook.name}</h2>
               {selectedBook.author && (
                 <p className="modal__author">{selectedBook.author}</p>
+              )}
+              {selectedBook.publisher && (
+                <p className="modal__publisher">Wydawnictwo: {selectedBook.publisher}</p>
+              )}
+              {selectedBook.yearOfIssue && (
+                <p className="modal__year">Rok: {selectedBook.yearOfIssue}</p>
               )}
               {selectedBook.description && (
                 <p className="modal__description">{selectedBook.description}</p>
