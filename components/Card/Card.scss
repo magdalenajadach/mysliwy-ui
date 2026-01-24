@@ -3,6 +3,10 @@
   width: 100%;
   background-color: white;
   padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h2 {
     margin: 0 auto 1.5rem;

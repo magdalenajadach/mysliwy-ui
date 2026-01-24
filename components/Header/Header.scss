@@ -3,8 +3,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 4rem;
-	padding-top: 4rem;
+  min-height: 100vh;
+  scroll-snap-align: start;
 }
 
 .header__logo {

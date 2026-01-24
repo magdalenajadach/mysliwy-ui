@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: #f1f3f6;
@@ -30,7 +35,10 @@ section,
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
+  min-height: 100vh;
+  scroll-snap-align: start;
 }
 
 section,
