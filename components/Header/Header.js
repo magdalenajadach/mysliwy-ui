@@ -5,7 +5,6 @@ export function Header() {
     <header>
       <img className="header__logo" alt="logo" src="/images/header/logo.png" />
       <img alt="logo" src="/images/header/tree_up.png" />
-      <h1></h1>
     </header>
   );
 }
