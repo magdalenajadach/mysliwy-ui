@@ -17,8 +17,7 @@ export function Card({ books }) {
   };
 
   return (
-    <section className="books">
-      <h2>Books</h2>
+    <section className="books" id="biblioteka">
       <div className="books__grid">
         {books.map((book) => (
           <div

@@ -4,11 +4,158 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  
+
+  img {
+    width: 100%;
+  }
 }
 
 .header__logo {
   max-width: 24rem;
-  align-self: center;
+  width: 30%;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
+
+.main-nav {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    display: inline-block;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: #53d0d1;
+
+      a,
+      h2 {
+        color: white;
+      }
+    }
+  }
+
+  h2 {
+    padding: 2vh;
+    margin: 1vh 5vh;
+  }
+
+  a {
+    display: block;
+    text-transform: uppercase;
+    color: #53d0d1;
+    text-decoration: none;
+    transition: all 0.4s;
+  }
+}
+
+// Hamburger menu - hidden by default on large screens
+.menu-toggle {
+  display: none;
+}
+
+.menu-label {
+  display: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #53d0d1;
+  position: relative;
+  transition: all 0.3s;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #53d0d1;
+    transition: all 0.3s;
+  }
+
+  &::before {
+    top: -8px;
+  }
+
+  &::after {
+    top: 8px;
+  }
+}
+
+// Responsive styles for small screens
+@media (max-width: 768px) {
+  .menu-label {
+    display: block;
+  }
+
+  .main-nav {
+    flex-direction: column;
+
+    ul {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    li {
+      text-align: center;
+    }
+
+    h2 {
+      margin: 1rem 0;
+    }
+  }
+
+  // Show menu when checkbox is checked
+  .menu-toggle:checked ~ ul {
+    display: flex;
+  }
+
+  // Animate hamburger to X when checked
+  .menu-toggle:checked ~ .menu-label .hamburger {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  // Keep hamburger above the overlay
+  .menu-label {
+    position: relative;
+    z-index: 101;
+  }
 }
