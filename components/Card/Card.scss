@@ -37,10 +37,12 @@
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 
-  &:hover {
-    transform: translateY(-4px);
-    border-color: #53d0d1;
-    box-shadow: 0 8px 24px rgba(83, 208, 209, 0.15);
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-4px);
+      border-color: #53d0d1;
+      box-shadow: 0 8px 24px rgba(83, 208, 209, 0.15);
+    }
   }
 
   &__image {
