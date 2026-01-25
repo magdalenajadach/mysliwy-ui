@@ -102,7 +102,7 @@
   max-width: 600px;
   width: 90%;
   max-height: 90vh;
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   gap: 2rem;
   padding: 2rem;
@@ -123,6 +123,7 @@
     cursor: pointer;
     color: #1c2430;
     transition: color 0.2s ease;
+    z-index: 1;
 
     &:hover {
       color: #53d0d1;
@@ -133,7 +134,8 @@
     width: 200px;
     flex-shrink: 0;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
+    align-self: center;
   }
 
   &__placeholder {
@@ -146,6 +148,10 @@
 
   &__details {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(90vh - 4rem);
+    overflow: hidden;
   }
 
   &__title {
@@ -157,12 +163,14 @@
     padding: 0;
     text-transform: none;
     letter-spacing: normal;
+    flex-shrink: 0;
   }
 
   &__author {
     font-size: 0.875rem;
     color: #53d0d1;
     margin: 0 0 0.5rem 0;
+    flex-shrink: 0;
   }
 
   &__publisher,
@@ -170,6 +178,7 @@
     font-size: 0.8rem;
     color: #666;
     margin: 0 0 0.25rem 0;
+    flex-shrink: 0;
   }
 
   &__description {
@@ -177,5 +186,7 @@
     color: #1c2430;
     line-height: 1.6;
     margin: 0.75rem 0 0 0;
+    overflow-y: auto;
+    flex: 1;
   }
 }
